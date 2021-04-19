@@ -1,0 +1,21 @@
+.make {
+  &__content {
+    position: relative;
+    .box-position {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      .heading-section {
+        color: $color-white-1;
+      }
+      button {
+        cursor: pointer;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

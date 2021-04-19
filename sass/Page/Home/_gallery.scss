@@ -1,0 +1,102 @@
+.gallery {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    .item {
+      overflow: hidden;
+      position: relative;
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      img {
+        transition: all 0.3s;
+        width: 100%;
+      }
+    }
+    .gallery__detail {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: white;
+      background: $color-blue-4;
+      padding: 10px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .circle {
+        width: 32px;
+        height: 32px;
+        border: 2px solid $color-white-1;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        &:hover {
+          background: $color-white-1;
+          color: $color-blue-4;
+        }
+      }
+    }
+    .item1 {
+      grid-column: 1 / span 3;
+      text-align: center;
+    }
+    .item3 {
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 2;
+      .gallery__detail {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: $color-white-1;
+        background: $color-blue-4;
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 22px;
+        .circle {
+          width: 40px;
+          height: 40px;
+          border: 2px solid $color-white-1;
+          border-radius: 50%;
+          display: inline-block;
+          text-align: center;
+          line-height: 38px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .gallery {
+    .gallery__content {
+      .gallery__detail {
+        padding: 10px 15px;
+        .gallery__text {
+          font-size: 12px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 796px) {
+  .gallery {
+    .gallery__content {
+      display: block;
+      .item1 {
+        padding: 30px 0;
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}

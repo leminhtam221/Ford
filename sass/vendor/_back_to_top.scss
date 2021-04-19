@@ -1,0 +1,19 @@
+.cd-top {
+  position: fixed;
+  bottom: 0;
+  right: 3%;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  background: rgba(85, 85, 85, 0.685);
+  text-align: center;
+  color: white;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+}
+.cd-top.cd-top--is-visible {
+  opacity: 1;
+  visibility: visible;
+}

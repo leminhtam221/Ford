@@ -1,0 +1,17 @@
+.btn {
+  &-blue {
+    @include button($color-white-1, $color-blue-1, $color-white-1, $color-blue-1, $color-white-1, $color-white-1);
+  }
+  &-blue--no-hover {
+    @include button($color-white-1, $color-blue-1, $color-blue-1, $color-white-1, $color-blue-1, $color-blue-3);
+  }
+  &-blue--border {
+    @include button($color-white-1, $color-blue-1, $color-blue-1, $color-blue-1, $color-white-1, $color-blue-3);
+  }
+  &-red {
+    @include button($color-white-1, $color-red-1, $color-red-1, $color-red-1, $color-white-1, $color-red-1);
+  }
+  &-white {
+    @include button($color-blue-1, $color-white-1, $color-blue-1, $color-gray-1, $color-white-1, $color-black-1);
+  }
+}
